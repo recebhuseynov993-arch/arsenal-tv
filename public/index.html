@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ARSENAL TV</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Arial,sans-serif}
+body{background:#000;color:#fff}
+.wrap{max-width:900px;margin:0 auto;padding:0 16px}
+header{position:sticky;top:0;background:rgba(0,0,0,.9);border-bottom:1px solid #222;z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-weight:800;font-size:20px;letter-spacing:1px}
+.brand b{color:#e01020}
+.cta{background:#e01020;color:#fff;border:none;padding:9px 18px;border-radius:8px;font-weight:700;cursor:pointer}
+.hero{text-align:center;padding:70px 0}
+.hero h1{font-size:44px;font-weight:900}
+.hero h1 b{color:#e01020}
+.hero p{color:#9a9aa5;margin:16px 0}
+.slogan{font-weight:700;font-size:18px}
+.slogan b{color:#e01020}
+.card{background:#0d0d0f;border:1px solid #222;border-radius:14px;overflow:hidden;margin:16px 0}
+.card .top{display:flex;align-items:center;gap:10px;padding:14px}
+.av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#e01020,#b00c18)}
+.card .top b{font-size:14px}
+.card .top span{font-size:12px;color:#9a9aa5;display:block}
+.card .ct{padding:0 14px 12px;font-size:14px}
+.card img{width:100%;height:220px;object-fit:cover}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}
+.feat div{background:#0d0d0f;border:1px solid #222;border-radius:12px;padding:16px;font-size:13px}
+.feat b{color:#e01020;display:block;margin-bottom:4px}
+footer{text-align:center;padding:40px 0;border-top:1px solid #222;color:#9a9aa5;font-size:13px}
+footer b{color:#e01020;letter-spacing:1px}
+.ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:50;align-items:center;justify-content:center;padding:16px}
+.ov.on{display:flex}
+.modal{background:#0d0d0f;border:1px solid #222;border-radius:16px;width:100%;max-width:380px;padding:26px;position:relative}
+.modal h2{text-align:center;margin-bottom:16px}
+.modal input{width:100%;background:#16161a;border:1px solid #222;border-radius:9px;padding:11px;color:#fff;margin-bottom:12px;font-size:14px}
+.modal button.sub{width:100%;background:#e01020;color:#fff;border:none;padding:12px;border-radius:9px;font-weight:700;cursor:pointer}
+.modal .sw{text-align:center;color:#9a9aa5;font-size:13px;margin-top:14px}
+.modal .sw a{color:#e01020;font-weight:700;cursor:pointer}
+.x{position:absolute;top:12px;right:16px;font-size:22px;color:#9a9aa5;cursor:pointer}
+.msg{display:none;padding:9px;border-radius:8px;font-size:13px;margin-bottom:12px;text-align:center}
+.msg.e{display:block;background:rgba(224,16,32,.15);color:#ff8a93}
+.msg.o{display:block;background:rgba(32,180,80,.15);color:#7ff0a0}
+.uchip{display:flex;align-items:center;gap:8px}
+.uchip .ua{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#e01020,#b00c18);display:flex;align-items:center;justify-content:center;font-weight:800}
+.lo{background:transparent;border:1px solid #222;color:#9a9aa5;padding:7px 12px;border-radius:8px;cursor:pointer}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <div class="brand">ARSENAL <b>TV</b></div>
+  <div id="auth"><button class="cta" id="open">Daxil ol</button></div>
+</div></header>
+
+<div class="wrap">
+  <section class="hero">
+    <h1>ARSENAL <b>TV</b></h1>
+    <p>Herbi xeberler • Video • Sosial sebeke</p>
+    <p class="slogan"><b>Guclu ordunun</b> mohkem cemiyyeti! 🇦🇿</p>
+  </section>
+
+  <div class="card">
+    <div class="top"><div class="av"></div><div><b>VetenSevgisi 🇦🇿</b><span>2 saat once</span></div></div>
+    <div class="ct">Azerbaycan Ordusunun pesekarligi her zaman ornekdir! #Qurur #Veten</div>
+    <img src="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=800&q=70" alt="">
+  </div>
+  <div class="card">
+    <div class="top"><div class="av"></div><div><b>HerbiXeberler</b><span>10.10.2025</span></div></div>
+    <div class="ct">Mudafie Nazirliyinden yeni aciqlama: Ordu telimlerini davam etdirir.</div>
+    <img src="https://images.unsplash.com/photo-1547483238-2cbf881a559f?w=800&q=70" alt="">
+  </div>
+
+  <div class="feat">
+    <div><b>Sosial sebeke</b>Paylas, beyen, serh et.</div>
+    <div><b>Herbi videolar</b>Pesekar video kontent.</div>
+    <div><b>Xeberler</b>En son mudafie xeberleri.</div>
+    <div><b>Canli yayim</b>Real vaxtda yayim.</div>
+  </div>
+</div>
+
+<footer><b>ARSENAL TV — HER ZAMAN SENINLE!</b> 🇦🇿<br>© 2025 Arsenal TV</footer>
+
+<div class="ov" id="ov"><div class="modal">
+  <span class="x" id="x">&times;</span>
+  <div class="msg" id="m"></div>
+  <form id="lf">
+    <h2>Daxil ol</h2>
+    <input id="li" placeholder="Istifadeci adi ve ya e-poct">
+    <input id="lp" type="password" placeholder="Sifre">
+    <button class="sub">Daxil ol</button>
+    <p class="sw">Hesabin yoxdur? <a id="tr">Qeydiyyatdan kec</a></p>
+  </form>
+  <form id="rf" style="display:none">
+    <h2>Qeydiyyat</h2>
+    <input id="rn" placeholder="Adiniz">
+    <input id="ru" placeholder="Istifadeci adi (herf/reqem/_)">
+    <input id="re" type="email" placeholder="E-poct">
+    <input id="rp" type="password" placeholder="Sifre (en azi 6 simvol)">
+    <button class="sub">Qeydiyyatdan kec</button>
+    <p class="sw">Hesabin var? <a id="tl">Daxil ol</a></p>
+  </form>
+</div></div>
+
+<script>
+var ov=document.getElementById('ov'),m=document.getElementById('m');
+var lf=document.getElementById('lf'),rf=document.getElementById('rf'),auth=document.getElementById('auth');
+function open(){ov.classList.add('on');sl();}
+function cl(){ov.classList.remove('on');}
+function sl(){lf.style.display='block';rf.style.display='none';cm();}
+function sr(){lf.style.display='none';rf.style.display='block';cm();}
+function cm(){m.className='msg';m.textContent='';}
+function sm(t,ok){m.className='msg '+(ok?'o':'e');m.textContent=t;}
+document.getElementById('open').onclick=open;
+document.getElementById('x').onclick=cl;
+document.getElementById('tr').onclick=sr;
+document.getElementById('tl').onclick=sl;
+ov.onclick=function(e){if(e.target===ov)cl();};
+function ru(u){var i=(u.displayName||u.username||'?').charAt(0).toUpperCase();
+ auth.innerHTML='<div class="uchip"><div class="ua">'+i+'</div><span>'+(u.displayName||u.username)+'</span> <button class="lo" id="lb">Cixis</button></div>';
+ document.getElementById('lb').onclick=function(){api('/api/logout',{}).then(function(){rg();});};}
+function rg(){auth.innerHTML='<button class="cta" id="open">Daxil ol</button>';document.getElementById('open').onclick=open;}
+function api(u,b){var o={method:b?'POST':'GET',credentials:'same-origin',headers:{}};
+ if(b){o.headers['Content-Type']='application/json';o.body=JSON.stringify(b);}
+ return fetch(u,o).then(function(r){return r.json().then(function(d){return{ok:r.ok,d:d};});});}
+lf.onsubmit=function(e){e.preventDefault();cm();
+ api('/api/login',{login:document.getElementById('li').value,password:document.getElementById('lp').value})
+ .then(function(r){if(r.ok){sm('Xos geldin, '+r.d.user.displayName+'!',1);ru(r.d.user);setTimeout(cl,700);}else sm(r.d.error||'Alinmadi',0);});};
+rf.onsubmit=function(e){e.preventDefault();cm();
+ api('/api/register',{displayName:document.getElementById('rn').value,username:document.getElementById('ru').value,email:document.getElementById('re').value,password:document.getElementById('rp').value})
+ .then(function(r){if(r.ok){sm('Hesab yaradildi!',1);ru(r.d.user);setTimeout(cl,800);}else sm(r.d.error||'Alinmadi',0);});};
+api('/api/me').then(function(r){if(r.ok&&r.d.user)ru(r.d.user);});
+</script>
+</body>
+</html>
